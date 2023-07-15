@@ -52,9 +52,9 @@ A aplicação estará sendo executada em `http://localhost:3000`.
 
 A aplicação oferece as seguintes funcionalidades:
 
-### 1. Criação de Boletos
+### 1. Importação de Boletos
 
-Você pode criar um novo boleto enviando uma solicitação POST para o endpoint `/boletos`. O corpo da solicitação deve conter os seguintes campos:
+Você pode importar um boleto enviando uma solicitação POST para o endpoint `/boletos/importar`. Deve selecionar no postman ou isominia, a opção Body, form-data, na key passa o nome ``file`` e escolhe a opção para enviar um arquivo, no value escolhe o boleto na extensão .csv e obrigatoriamente o boleto tem que conter os campos abaixo:
 
 - `nome_sacado`: Nome do sacado.
 - `id_lote`: ID do lote ao qual o boleto está associado.
@@ -76,7 +76,7 @@ Também é possível realizar filtros opcionais na consulta, usando os seguintes
 Exemplo de uso:
 
 ```
-GET /boletos?nome=JOSE&valor_inicial=100&valor_final=200&id_lote=2
+GET /boletos?nome_sacado=JOSE&valor=182.54&id_lote=3
 ```
 
 ### 3. Geração de Relatório
