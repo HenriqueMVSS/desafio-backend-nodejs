@@ -44,6 +44,8 @@ A aplicação estará sendo executada em `http://localhost:3000`.
 
 ## Utilização
 
+## Obs: Obrigatoriamente será necessário criar uma pasta na raiz do projeto com o nome `uploads`, para o PDF ser salvo localmente dentro da mesma.
+
 A aplicação oferece as seguintes funcionalidades:
 
 ### 1. Importação de Boletos
