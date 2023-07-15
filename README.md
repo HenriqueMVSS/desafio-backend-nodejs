@@ -79,21 +79,11 @@ Exemplo de uso:
 GET /boletos?nome_sacado=JOSE&valor=182.54&id_lote=3
 ```
 
-### 3. Geração de Relatório
+## 3. Geração de Relatório em PDF
 
-Você pode gerar um relatório em formato PDF contendo uma tabela com os boletos especificados, enviando uma solicitação GET para o endpoint `/relatorio`. O relatório será retornado em formato PDF.
+1. Para gerar um relatório em PDF com os boletos filtrados, envie uma requisição GET para a rota `/pdf/relatorio?relatorio=1`. Certifique-se de que o parâmetro `relatorio` esteja definido como `1`.
 
-Os boletos a serem incluídos no relatório devem ser especificados usando o seguinte parâmetro de consulta:
-
-- `boletos`: Array de IDs dos boletos a serem incluídos no relatório.
-
-Exemplo de uso:
-
-```
-GET /relatorio?boletos=1,2,3
-```
-
-O relatório será retornado como um arquivo PDF.
+2. O servidor irá gerar um arquivo PDF contendo um relatório com os boletos que correspondem aos filtros especificados. O relatório será retornado como uma resposta JSON com a chave `base64`, contendo o base64 do arquivo PDF.
 
 ## Contribuição
 
@@ -102,3 +92,4 @@ Se você quiser contribuir para este projeto, fique à vontade para enviar pull 
 ## Licença
 
 Este projeto está licenciado sob a licença [MIT](https://opensource.org/licenses/MIT).
+
