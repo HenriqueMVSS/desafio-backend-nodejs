@@ -44,7 +44,7 @@ A aplicação estará sendo executada em `http://localhost:3000`.
 
 ## Utilização
 
-## Obs: Obrigatoriamente será necessário criar uma pasta na raiz do projeto com o nome `uploads`, para o PDF ser salvo localmente dentro da mesma.
+### Obs: Obrigatoriamente será necessário criar uma pasta na raiz do projeto com o nome `uploads`, para o PDF ser salvo e desmembrado localmente dentro da mesma.
 
 A aplicação oferece as seguintes funcionalidades:
 
@@ -84,6 +84,10 @@ Envie uma requisição POST para o endpoint `/pdf/importar` utilizando o Postman
 Para gerar um relatório em PDF com os boletos filtrados, envie uma requisição GET para o endpoint `/pdf/relatorio?relatorio=1`. Certifique-se de que o parâmetro `relatorio` esteja definido como `1`.
 
 O servidor irá gerar um arquivo PDF contendo um relatório com os boletos que correspondem aos filtros especificados. O relatório será retornado como uma resposta JSON com a chave `base64`, contendo o base64 do arquivo PDF.
+
+### Considerações finais
+
+No projeto tem dois arquivos `boletos.csv e boletos.pdf`, que podem ser utilizados no teste da funcionalidade da aplicação
 
 ## Contribuição
 
